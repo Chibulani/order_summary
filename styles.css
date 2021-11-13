@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;0,700;1,900&display=swap');
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --brigth-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --very-desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --w1: 500;
+    --w2: 700;
+    --w3: 900; 
+    --font-family:'Red Hat Display', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    background: var(--pale-blue);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.pattern-background {
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+.pattern-background > * {
+    width: 100%;
+    
+}
+
+.mobile-background {
+    display: none;
+}
+
+.card{
+    margin: 6em auto;
+    max-width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: end end radius 15px;
+    z-index: 1;
+    background: #fff;
+
+}
+
+.card-image img {
+    background-size: cover ;
+    width: 100%;
+}
+
+.card-body {
+    text-align: center;
+    padding: 30px;
+    /* background-color:var(--pale-blue); */
+}
+
+.card-header {
+    font-family: var(--font-family);
+    font-weight: var(--w3);
+    color:var(--dark-blue);
+
+}
+
+
+.card-content {
+    margin: 1.0rem 0.5rem;
+    color:var(--very-desaturated-blue);
+    font-family: var(--font-family);
+    font-weight: var(--w2);
+    line-height: 28px;
+    letter-spacing: 0.09rem;
+}
+
+.card-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--very-pale-blue);
+    border-radius: 15px;
+    padding: 1rem;
+    font-family: var(--font-family);
+}
+
+.card-plan a:link {
+    color:var(--bright-blue);
+    background-color: transparent;
+    font-weight:var(--w2);
+
+}
+
+.plan-type {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.plan-type h3 {
+    padding-bottom: 5px;
+    color: var(--dark-blue);
+    font-weight: var(--w2);
+}
+
+.plan-type p {
+    color:var(--very-desaturated-blue);
+}
+
+
+.proceed {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color:var(--brigth-blue) ;
+    color: white;
+    margin: 2rem 0;
+    box-shadow:0 8px 0 7px var(--very-pale-blue) ;
+    font-family: var(--font-family);
+    font-weight:var(--w2);
+    cursor: pointer;
+
+}
+
+.proceed:hover{
+    opacity: 0.8;
+}
+
+
+.cancel {
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 10px 0;
+    font-weight: var(--w3);
+    color:var(--very-desaturated-blue);
+    font-size: 18px;
+    font-family: var(--font-family);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .1s ease-in;
+}
+
+.cancel:hover {
+    color: white;
+    background-color:var(--brigth-blue);
+    opacity: 0.2;
+}
+
+
+/* Controls for mobile  */
+
+@media only screen and (max-width:575px)  {
+    .desktop-background{
+        display: none;
+    }
+
+    .mobile-background {
+        display: block;
+    }
+}
+
